@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.minhhoang.nhom8_ltdd_tracuubds"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.minhhoang.nhom8_ltdd_tracuubds"
         minSdk = 31
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -28,6 +28,13 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        getByName("main") {
+            res {
+                srcDirs("src\\main\\res", "src\\main\\res\\2")
+            }
+        }
     }
 }
 

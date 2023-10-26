@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".menu.lookup.lookup_sreach_activity">
+
+    <ImageButton
+        android:id="@+id/lookup_sreach_back"
+        android:layout_width="140dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="6dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookup_main_backtomain" />
+
+    <ImageButton
+        android:id="@+id/diachi"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="75dp"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/lookup_sreach_enable_diachi_button" />
+
+    <ImageButton
+        android:id="@+id/toado"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/lookup_sreach_disable_toado_button" />
+
+    <FrameLayout
+        android:id="@+id/lookup_frame"
+        android:layout_width="match_parent"
+        android:layout_height="657dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="155dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/lookup_border_shape" />
+    </FrameLayout>
+
+</RelativeLayout>

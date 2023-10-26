@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".menu.lookup.lookup_by_diachi_Fragment">
+
+    <EditText
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/lookup_input_border"
+        android:drawableStart="@drawable/lookup_ico_sreach"
+        android:drawablePadding="20dp"
+        android:hint="Nhập địa chỉ, VD: 20 Cao Thắng"
+        android:paddingStart="20dp" />
+
+    <ImageButton
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/lookup_get_position" />
+
+</FrameLayout>

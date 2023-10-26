@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:orientation="vertical"
+    tools:context=".menu.lookup.lookup_main_activity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,23 +18,18 @@
         android:id="@+id/tra_cuu"
         android:layout_width="253dp"
         android:layout_height="122dp"
-        android:layout_alignParentLeft="true"
         android:layout_marginLeft="34dp"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="210dp"
+        android:gravity="top"
+        android:lineSpacingExtra="6sp"
         android:text="@string/tra_cuu_info"
         android:textSize="32dp"
-        android:lineSpacingExtra="6sp"
-        android:translationY="-2.96sp"
-        android:gravity="top"
-        />
+        android:translationY="-2.96sp" />
 
     <TextView
         android:id="@+id/tra_cuu_info"
         android:layout_width="153dp"
         android:layout_height="122dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginLeft="34dp"
         android:layout_marginTop="260dp"
         android:gravity="top"
@@ -48,9 +42,18 @@
         android:id="@+id/tra_cuu_button"
         android:layout_width="343dp"
         android:layout_height="58dp"
-        android:layout_gravity="center"
-        android:src="@drawable/lookup_main_mainbutton"
+        android:layout_centerInParent="true"
         android:background="@color/transparent"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/lookup_main_mainbutton" />
 
-</FrameLayout>
+    <FrameLayout
+        android:id="@+id/main_footer"
+
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+    </FrameLayout>
+</RelativeLayout>

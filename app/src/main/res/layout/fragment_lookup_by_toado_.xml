@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".menu.lookup.lookup_by_toado_Fragment">
+
+    <EditText
+        android:id="@+id/toado_srach"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/lookup_input_border"
+        android:drawableStart="@drawable/lookup_ico_sreach"
+        android:drawablePadding="20dp"
+        android:hint="Nhập Tọa độ, VD :21.0142389387..."
+
+        android:paddingStart="20dp" />
+
+    <ImageButton
+        android:id="@+id/toado_select"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/lookup_get_position" />
+
+    <View
+        android:layout_width="343dp"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/lookup_line_vector"
+    />
+
+    <TextView
+        android:layout_width="343dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
+        android:text="Hướng dẫn lấy tọa độ tại google map"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:lineSpacingExtra="2sp"
+        android:translationY="-1.2sp"
+        android:gravity="top"
+        />
+
+    <View
+        android:id="@+id/image_7"
+        android:layout_width="343dp"
+        android:layout_height="255dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/lookup_sreach_toado_img"
+        />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="500dp"
+        android:text="Bước 1: Vào Goole map"
+        android:textSize="16dp"
+        android:lineSpacingExtra="2sp"
+        android:translationY="-1.2sp"
+        android:gravity="top"
+        />
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="550dp"
+        android:text="Bước 2: Ấn vào địa điểm để thả gim"
+        android:textSize="16dp"
+        android:lineSpacingExtra="2sp"
+        android:translationY="-1.2sp"
+        android:gravity="top"
+        />
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="600dp"
+        android:text="Bước 3: Sau đó ấn vào tọa độ để copy"
+        android:textSize="16dp"
+        android:lineSpacingExtra="2sp"
+        android:translationY="-1.2sp"
+        android:gravity="top"
+        />
+</FrameLayout>
