@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_repage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:drawableRight="@drawable/repage"
+        android:background=""></Button>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Điều khoản sử dụng dịch vụ"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Điều khoản dịch vụ bất động sản thường phải được biên soạn một cách cẩn thận và chi tiết để bảo vệ cả người bán và người mua bất động sản. Dưới đây là một phiên bản ngắn gọn của điều khoản dịch vụ bất động sản, nhưng lưu ý rằng nó có thể cần điều chỉnh hoặc mở rộng để phù hợp với tình hình cụ thể:"
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1. Mục đích:
+Dịch vụ bất động sản này nhằm đại diện cho Người Bán (hoặc Người Mua) trong quá trình mua bán, thuê hoặc giao dịch bất động sản."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2. Thanh toán:
+Phí dịch vụ dựa trên giao dịch hoặc các điều khoản được thỏa thuận giữa hai bên."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="3. Đại diện:
+Người Dịch vụ Bất động sản đại diện cho Người Bán (hoặc Người Mua) và nỗ lực tốt nhất để đảm bảo lợi ích tốt nhất của họ."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="4. Tiêu chuẩn đạo đức:
+Người Dịch vụ Bất động sản cam kết tuân thủ các nguyên tắc đạo đức và luật pháp liên quan đến ngành bất động sản."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="5. Bảo mật thông tin:
+Cam kết bảo mật thông tin cá nhân và thông tin liên quan đến giao dịch."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="6. Hiểu biết và thông tin:
+Cam kết đảm bảo rằng mọi thông tin cung cấp là chính xác và hoàn chỉnh."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="7. Hiệu lực:
+Điều khoản này sẽ có hiệu lực khi cả hai bên đã ký kết và chấp nhận các điều khoản của hợp đồng."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Lưu ý rằng điều khoản cụ thể có thể khác nhau tùy theo quốc gia và khu vực, và nên được tham khảo từng trường hợp cụ thể với sự hỗ trợ của một luật sư hoặc chuyên gia trong lĩnh vực bất động sản."
+            android:textAlignment="inherit"
+            android:textSize="14dp"></TextView>
+    </LinearLayout>
+</RelativeLayout>
