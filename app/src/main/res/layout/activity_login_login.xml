@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".menu.login.login_login_Activity">
+
+    <LinearLayout
+        android:id="@+id/khungdangnhap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/buttonback"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="center"
+            app:srcCompat="@drawable/login_back_button2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Đăng Nhập"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/blue">
+        </TextView>
+
+        <EditText
+            android:id="@+id/login_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/blue"
+            android:drawablePadding="15dp"
+            android:hint="Tài khoản Hoặc Mật Khẩu Không Chính xác"
+            android:padding="20dp"
+            android:textColorHint="@color/white"
+            android:textSize="15dp"
+            tools:visibility="visible"></EditText>
+
+        <EditText
+            android:id="@+id/ntt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey"
+            android:drawableLeft="@drawable/login_email_input"
+            android:drawablePadding="15dp"
+            android:hint="Nhập tài khoản"
+            android:padding="20dp"
+            android:textColorHint="@color/grey1"></EditText>
+
+        <EditText
+            android:id="@+id/ntt_matkhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey"
+            android:drawableLeft="@drawable/login_password_ico"
+            android:drawablePadding="15dp"
+            android:textSize="20dp"
+            android:hint="Nhập mật khẩu"
+            android:padding="20dp"
+            android:password="true"
+            android:textColorHint="@color/grey1"></EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/forgot_pasword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quên Mật Khẩu"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/blue">
+            </Button>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/bt_dangnhap"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/login_login_button" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            app:srcCompat="@drawable/login_split_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/login_with_google"
+                android:layout_width="160dp"
+                android:layout_height="70dp"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/login_with_google">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/login_with_facebook"
+                android:layout_width="160dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/login_with_facebook"></ImageButton>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
