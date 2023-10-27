@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".menu.login.login_login_Activity">
 
     <LinearLayout
         android:id="@+id/khungdangnhap"
@@ -13,36 +16,36 @@
         android:layout_marginBottom="30dp"
         android:orientation="vertical">
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonback"
-            android:paddingLeft="10dp"
             android:layout_width="70dp"
             android:layout_height="60dp"
-            android:drawableLeft="@drawable/button_back"
-            android:background=""></Button>
+            android:background="@color/white"
+            android:scaleType="center"
+            app:srcCompat="@drawable/login_back_button2" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Đăng Nhập"
             android:textSize="30dp"
+            android:textAlignment="center"
             android:textColor="@color/blue">
         </TextView>
+
         <EditText
-            android:id="@+id/ntt_email"
+            android:id="@+id/login_error"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:textColorHint="@color/white"
-            android:textSize="15dp"
             android:background="@color/blue"
             android:drawablePadding="15dp"
             android:hint="Tài khoản Hoặc Mật Khẩu Không Chính xác"
             android:padding="20dp"
-            ></EditText>
-
-
-
+            android:textColorHint="@color/white"
+            android:textSize="15dp"
+            tools:visibility="visible"></EditText>
 
         <EditText
             android:id="@+id/ntt_email"
@@ -50,9 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@color/grey"
-            android:drawableLeft="@drawable/email"
+            android:drawableLeft="@drawable/login_email_input"
             android:drawablePadding="15dp"
-            android:hint="thanh28@gmail.com"
+            android:hint="Nhập tài khoản"
             android:padding="20dp"
             android:textColorHint="@color/grey1"></EditText>
 
@@ -62,10 +65,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@color/grey"
-            android:drawableLeft="@drawable/mk"
+            android:drawableLeft="@drawable/login_password_ico"
             android:drawablePadding="15dp"
             android:textSize="20dp"
-            android:hint="........"
+            android:hint="Nhập mật khẩu"
             android:padding="20dp"
             android:password="true"
             android:textColorHint="@color/grey1"></EditText>
@@ -75,92 +78,63 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/qmk"
+            <Button
+                android:id="@+id/forgot_pasword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:text="Quên Mật Khẩu"
+                android:backgroundTint="@color/white"
                 android:textColor="@color/blue">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/hienmatkhau"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="15dp"
-                android:text="Hiện mật khẩu"
-                android:textColor="@color/blue"></TextView>
+            </Button>
 
         </LinearLayout>
-        <Button
+
+        <ImageButton
             android:id="@+id/bt_dangnhap"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="50dp"
-            android:backgroundTint="@color/green"
-            android:padding="12dp"
-            android:text="Đăng Nhập"
-            android:textSize="23dp"></Button>
-        <TextView
-            android:textColor="@color/grey"
-            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:id="@+id/textView3"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/login_login_button" />
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OR" />
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            app:srcCompat="@drawable/login_split_line" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
 
-            <Button
 
-                android:backgroundTint="@color/grey"
-                android:id="@+id/button2"
+            <ImageButton
+                android:id="@+id/login_with_google"
                 android:layout_width="160dp"
-                android:layout_height="90dp"
-                android:drawableLeft="@drawable/icon_google"
-                android:paddingLeft="70dp"
+                android:layout_height="70dp"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/login_with_google">
 
+            </ImageButton>
 
-
-                >
-
-            </Button>
-            <Button
+            <ImageButton
+                android:id="@+id/login_with_facebook"
+                android:layout_width="160dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="30dp"
-                android:backgroundTint="@color/grey"
-                android:id="@+id/button3"
-                android:layout_width="160dp"
-                android:layout_height="90dp"
-                android:drawableLeft="@drawable/icon_fb"
-                android:paddingLeft="70dp"
-
-
-                >
-
-            </Button>
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/login_with_facebook"></ImageButton>
 
         </LinearLayout>
-        <TextView
-            android:id="@+id/chua_dang_ky"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Chưa có tài khoản? Đăng ký"
-            android:gravity="center"
-            android:layout_marginTop="35dp"
-            android:textColor="@color/black"
 
-            />
     </LinearLayout>
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
