@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Nhom8_LTDD_TraCuuBDS"
         tools:targetApi="34">
         <activity
-            android:name=".Thongbao_main"
+            android:name=".Hotro_main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

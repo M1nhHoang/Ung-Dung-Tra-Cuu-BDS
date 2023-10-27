@@ -49,6 +49,7 @@
         android:id="@+id/day"
         android:layout_width="71dp"
         android:layout_height="19dp"
+        android:layout_below="@+id/header_layout"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="28dp"
         android:layout_alignParentTop="true"
@@ -64,6 +65,7 @@
 
     <TextView
         android:id="@+id/yesterday"
+        android:layout_below="@+id/today"
         android:layout_width="71dp"
         android:layout_height="19dp"
         android:layout_alignParentLeft="true"
@@ -74,9 +76,12 @@
         android:gravity="center_horizontal|top"/>
 
     <ListView
+        android:id="@+id/list_yesterday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/day"/>
+        android:layout_below="@+id/yesterday"
+        />
+
 
     <TextView
         android:id="@+id/linkLabel"
