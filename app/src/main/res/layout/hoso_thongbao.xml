@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="26dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="38dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/circle_button"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/hoso_thongbao" />
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="124dp"
+            android:layout_marginTop="5dp"
+            android:text="Thông báo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="71dp"
+        android:layout_height="19dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="64dp"
+        android:text="Hôm nay"
+        android:gravity="center_horizontal|top"/>
+    
+    <ListView
+        android:id="@+id/today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/day"/>
+
+    <TextView
+        android:id="@+id/yesterday"
+        android:layout_width="71dp"
+        android:layout_height="19dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="399dp"
+        android:text="Hôm qua"
+        android:gravity="center_horizontal|top"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/day"/>
+
+    <TextView
+        android:id="@+id/linkLabel"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="273dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="687dp"
+        android:text="Xem thêm"
+        android:autoLink="web"
+        android:textSize="14sp"
+        android:textColor="@drawable/linklabel_viewmore"
+        android:linksClickable="true"
+        android:textStyle="bold|italic"/>
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="375dp"
+    android:layout_height="812dp"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/hoso_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/hoso_menu">
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="375dp"
+            android:layout_height="178dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/anh_nen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anh_hoso" />
+
+            <ImageView
+                android:id="@+id/anh_dai_dien"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_image"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anh_dai_dien" />
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/circle_button"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="124dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:text="Hồ sơ"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtTen"
+            android:layout_width="141dp"
+            android:layout_height="17dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="202dp"
+            android:text="Lê Quang Bảo Cường"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="141dp"
+            android:layout_height="17dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="219dp"
+            android:text="abcxyz@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <Button
+            android:layout_width="137dp"
+            android:layout_height="38dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="263dp"
+            android:background="@drawable/button_edit"
+            android:text="Chỉnh sửa"
+            android:textColor="@color/white" />
+
+        <ListView
+            android:id="@+id/menuitem"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="348dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="25dp" />
+
+        <FrameLayout
+            android:id="@+id/footer"
+            android:layout_width="375dp"
+            android:layout_height="62dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="700dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="top"
+                android:background="@android:color/black" />
+
+            <!--Nút truy cập vào home-->
+            <LinearLayout
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="9dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trang chủ"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--Nút truy cập vào mục tra cứu-->
+            <LinearLayout
+                android:id="@+id/btnLookup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="168dp"
+                android:layout_marginTop="9dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/tracuu"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/layers" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tra cứu QH"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--Nút truy cập vào hồ sơ-->
+            <LinearLayout
+                android:id="@+id/btnProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="322dp"
+                android:layout_marginTop="9dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/hoso"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/user_cicrle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tài khoản"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

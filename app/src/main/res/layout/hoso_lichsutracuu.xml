@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="26dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="38dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/circle_button"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/hoso_lichsutracuu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="124dp"
+            android:layout_marginTop="5dp"
+            android:text="Lịch sử tra cứu"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="268dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/header_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="49dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/searchEdt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nhập địa chỉ, khu vực..."
+            android:drawableStart="@drawable/edit"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/search_background"
+            android:inputType="text"
+            android:singleLine="true"
+            android:ellipsize="end" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/spn_va_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchbar">
+
+        <!-- Button bên phải -->
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lọc"
+            android:background="@drawable/button_change_edit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <!-- Spinner chiếm phần lớn không gian bên trái của Button -->
+        <Spinner
+            android:id="@+id/spinner_loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/filterButton"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@array/city_filters"
+            android:dropDownVerticalOffset="5dp"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview_lichsu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spn_va_btn" />
+
+    <TextView
+        android:id="@+id/linkLabel"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="273dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="687dp"
+        android:text="Xem thêm"
+        android:autoLink="web"
+        android:textSize="14sp"
+        android:textColor="@drawable/linklabel_viewmore"
+        android:linksClickable="true"
+        android:textStyle="bold|italic"/>
+
+</RelativeLayout>

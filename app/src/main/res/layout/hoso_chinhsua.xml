@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="375dp"
+    android:layout_height="812dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/hoso_chinhsua"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/hoso_menu">
+
+        <FrameLayout
+            android:id="@+id/frame_chinhsua"
+            android:layout_width="375dp"
+            android:layout_height="178dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/anhnen_chinhsua"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anh_hoso" />
+
+            <ImageView
+                android:id="@+id/anhdaidien_chinhsua"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_image"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anh_dai_dien" />
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/circle_button"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="124dp"
+                android:layout_marginTop="15dp"
+                android:text="Chỉnh sửa hồ sơ"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/pic_edit"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="120dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/camera" />
+
+            <ImageButton
+                android:id="@+id/background_pic_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="153dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/camera" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="329dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="193dp"
+            android:clipToOutline="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="10dp"
+                android:gravity="top"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2sp"
+                android:text="Họ tên"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbHoten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="40dp"
+                android:hint="Nhập họ tên(vd: Lê Quang Bảo Cường)"
+                android:textSize="10dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="329dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="275dp"
+            android:clipToOutline="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="13dp"
+                android:gravity="top"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2sp"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="40dp"
+                android:hint="Nhập username(vd: cuongxyz123)"
+                android:textSize="10dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="329dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="356dp"
+            android:clipToOutline="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="13dp"
+                android:gravity="top"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2sp"
+                android:text="Mật khẩu"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="40dp"
+                android:hint="Nhập Password"
+                android:textSize="10dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="329dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="437dp"
+            android:clipToOutline="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="13dp"
+                android:gravity="top"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2sp"
+                android:text="Xác nhận mật khẩu"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbPasswordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="40dp"
+                android:hint="Nhập lại mật khẩu"
+                android:textSize="10dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="329dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="518dp"
+            android:clipToOutline="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="13dp"
+                android:gravity="top"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2sp"
+                android:text="Số điện thoại"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="40dp"
+                android:hint="Nhập số điện thoại"
+                android:textSize="10dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="329dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="599dp"
+            android:clipToOutline="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="13dp"
+                android:gravity="top"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2sp"
+                android:text="Số điện thoại"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="40dp"
+                android:hint="Nhập số điện thoại"
+                android:textSize="10dp" />
+                </FrameLayout>
+            </FrameLayout>
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="Thay đổi"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="700dp">
+
+        <Button
+            android:id="@+id/button_editProfile"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_change_edit"
+            android:text="Thay đổi"
+
+            />
+
+    </FrameLayout>
+</RelativeLayout>
