@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Nhom8_LTDD_TraCuuBDS</string>
+
+        <string-array name="city_filters">
+        <item>Chọn thành phố</item> <!-- dòng gợi ý -->
+        <item>Đà Nẵng</item>
+        <item>Hà Nội</item>
+        <item>Hồ Chí Minh</item>
+    </string-array>
 </resources>
