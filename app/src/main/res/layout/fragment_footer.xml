@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".FooterFragment">
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:background="@drawable/main_footer_border" />
+
+    <ImageButton
+        android:id="@+id/footer_home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/main_footer_home" />
+
+    <ImageButton
+        android:id="@+id/footer_lookup"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="180dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/main_footer_lookup" />
+
+    <ImageButton
+        android:id="@+id/footer_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/main_footer_profile" />
+
+</RelativeLayout>
