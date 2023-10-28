@@ -16,12 +16,12 @@ public class profile_main_setting_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_hoso_chinhsua);
+        setContentView(R.layout.profile_hoso_caidat);
         create_back_button();
     }
 
     private void create_back_button() {
-        back = findViewById(R.id.profile_setting_button_back);
+        back = findViewById(R.id.button_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
