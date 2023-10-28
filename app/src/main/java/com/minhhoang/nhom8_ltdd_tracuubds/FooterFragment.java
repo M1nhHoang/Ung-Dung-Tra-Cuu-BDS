@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.profile.profile_main_activity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -86,6 +87,15 @@ public class FooterFragment extends Fragment {
             public void onClick(View v) {
                 // Tạo Intent để chuyển đổi sang Activity mới
                 Intent intent = new Intent(getActivity(), lookup_main_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tạo Intent để chuyển đổi sang Activity mới
+                Intent intent = new Intent(getActivity(), profile_main_activity.class);
                 startActivity(intent);
             }
         });

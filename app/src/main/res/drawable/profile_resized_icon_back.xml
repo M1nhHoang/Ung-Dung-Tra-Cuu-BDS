@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <bitmap
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="@drawable/profile_icon_back"
+        android:gravity="center"
+        android:antialias="true"
+        android:filter="true"
+        android:dither="true"/>
+</selector>

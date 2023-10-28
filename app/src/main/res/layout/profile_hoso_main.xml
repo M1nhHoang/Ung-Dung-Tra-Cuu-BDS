@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="375dp"
+    android:layout_height="812dp"
+    android:background="@color/white"
+    tools:context=".menu.profile.profile_main_activity">
+
+    <FrameLayout
+        android:id="@+id/hoso_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/profile_hoso_menu">
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="375dp"
+            android:layout_height="178dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/anh_nen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_anh_hoso" />
+
+            <ImageView
+                android:id="@+id/anh_dai_dien"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/profile_circle_image"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_anh_dai_dien" />
+
+            <ImageButton
+                android:id="@+id/profile_back"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/profile_circle_button"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile_icon_back" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="124dp"
+                android:layout_marginTop="15dp"
+                android:text="Hồ sơ"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtTen"
+            android:layout_width="141dp"
+            android:layout_height="17dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="202dp"
+            android:text="Lê Quang Bảo Cường"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="141dp"
+            android:layout_height="17dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="219dp"
+            android:text="abcxyz@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/profile_main_setting"
+            android:layout_width="137dp"
+            android:layout_height="38dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="263dp"
+            android:background="@drawable/profile_button_edit"
+            android:text="Chỉnh sửa"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/profile_setting_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile_setting_button" />
+
+        <ImageButton
+            android:id="@+id/profile_history_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="420dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile_history_button" />
+
+        <ImageButton
+            android:id="@+id/profile_notification_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="490dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile_notification_button" />
+
+        <ImageButton
+            android:id="@+id/profile_support_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="560dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile_support_button" />
+
+        <ImageButton
+            android:id="@+id/profile_logout"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="630dp"
+            android:layout_marginLeft="100dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile_logout" />
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/profile_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+    </FrameLayout>
+
+</RelativeLayout>

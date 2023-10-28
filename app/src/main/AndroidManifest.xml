@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Nhom8_LTDD_TraCuuBDS"
         tools:targetApi="31">
         <activity
+            android:name=".menu.profile.profile_main_setting_activity"
+            android:exported="false" />
+        <activity
             android:name=".menu.home.home_main_activity"
             android:exported="false"
             android:label="@string/title_activity_home_main"
@@ -34,6 +37,18 @@
             android:exported="false" />
         <activity
             android:name=".menu.register.register_main_activity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.profile.profile_main_activity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.profile.Hotro_main"
+            android:exported="false" />
+        <activity
+            android:name=".menu.profile.Lichsutracuu_main"
+            android:exported="false" />
+        <activity
+            android:name=".menu.profile.Thongbao_main"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
