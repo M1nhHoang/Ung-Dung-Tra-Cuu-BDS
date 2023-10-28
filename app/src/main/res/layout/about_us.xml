@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/khung"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NHÓM 8 - TRA CỨU BẤT ĐỘNG SẢN"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:layout_marginTop="50dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN THÀNH VIÊN NHÓM:"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="30dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Đoàn Ngọc Hiếu - 2050531200142"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="20dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Lê Quang Bảo Cường - 21115053120108"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="20dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Hồ Lê Minh Hoàng - 2050531200145"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="20dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Trần Thanh Long - 21115053120329"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="20dp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. Trần Duy Thành - 21115053120348"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="20dp"></TextView>
+
+    </LinearLayout>
+
+</RelativeLayout>
