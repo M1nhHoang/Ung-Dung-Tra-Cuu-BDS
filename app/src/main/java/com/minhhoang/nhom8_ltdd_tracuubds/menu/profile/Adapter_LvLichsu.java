@@ -19,7 +19,7 @@ public class Adapter_LvLichsu extends ArrayAdapter<Hoso_Ls_Item> {
 
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView==null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.adapter_profile_listview_thongbao, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.adapter_profile_listview_lichsutracuu, parent, false);
         }
         Hoso_Ls_Item currentItem = getItem(position);
         ImageView anhbds = convertView.findViewById(R.id.lv_anhbds);
