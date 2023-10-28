@@ -47,7 +47,7 @@ public class profile_main_activity extends AppCompatActivity {
         profile_main_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadActivity(profile_main_setting_activity.class);
+                loadActivity(profile_chinhsua_activity.class);
             }
         });
 
