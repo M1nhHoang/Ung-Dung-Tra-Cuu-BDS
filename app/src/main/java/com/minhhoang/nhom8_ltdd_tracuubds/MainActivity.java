@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.login.login_main_Activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
 public class MainActivity extends AppCompatActivity {
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        loadActivity(login_main_Activity.class);
+        loadActivity(home_main_activity.class);
     }
 
     private void loadActivity(Class<?> targetActivityClass) {

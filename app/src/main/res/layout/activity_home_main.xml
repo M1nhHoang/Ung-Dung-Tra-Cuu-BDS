@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".menu.home.home_main_activity">
+    
+    <RelativeLayout
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <EditText
+            android:id="@+id/home_sreach"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/lookup_input_border"
+            android:drawableStart="@drawable/lookup_ico_sreach"
+            android:drawablePadding="20dp"
+            android:hint="Nhập từ khóa.."
+            android:textColorHint="@color/black"
+            android:paddingStart="20dp">
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/home_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="320dp"
+            android:background="@color/white"
+            android:src="@drawable/home_profile_ico">
+        </ImageButton>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/home_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/home_main_footer"
+        android:layout_below="@+id/home_header"></FrameLayout>
+
+</RelativeLayout>

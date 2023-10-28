@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Nhom8_LTDD_TraCuuBDS"
         tools:targetApi="31">
         <activity
+            android:name=".menu.home.home_main_activity"
+            android:exported="false"
+            android:label="@string/title_activity_home_main"
+            android:theme="@style/Theme.Nhom8_LTDD_TraCuuBDS" />
+        <activity
             android:name=".menu.lookup.lookup_sreach_activity"
             android:exported="false" />
         <activity
