@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        loadActivity(home_main_activity.class);
+        loadActivity(login_main_Activity.class);
     }
 
     private void loadActivity(Class<?> targetActivityClass) {
