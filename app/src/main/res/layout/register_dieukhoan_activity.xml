@@ -18,7 +18,7 @@
         android:id="@+id/bt_repage"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:drawableRight="@drawable/repage"
+        android:drawableRight="@drawable/register_repage_image"
         android:background=""></Button>
         <TextView
             android:layout_width="match_parent"
