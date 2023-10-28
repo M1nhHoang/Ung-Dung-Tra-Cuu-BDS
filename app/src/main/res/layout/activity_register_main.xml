@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent">
@@ -14,18 +16,21 @@
         android:layout_marginBottom="30dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/bt_repage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:drawableRight="@drawable/register_repage_image"
-            android:background=""></Button>
+        <ImageButton
+            android:id="@+id/register_back_btn"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="center"
+            app:srcCompat="@drawable/login_back_button2" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Tạo tài khoản của bạn"
             android:textSize="30dp"
+            android:textAlignment="center"
             android:textColor="@color/blue"></TextView>
         <TextView
             android:layout_width="match_parent"
@@ -36,7 +41,7 @@
 
         <EditText
 
-            android:id="@+id/et_tendangnhap"
+            android:id="@+id/register_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grey"
@@ -50,7 +55,7 @@
         </EditText>
 
         <EditText
-            android:id="@+id/et_email"
+            android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -62,7 +67,7 @@
             android:textColorHint="@color/grey1"></EditText>
 
         <EditText
-            android:id="@+id/et_matkhau"
+            android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -71,7 +76,20 @@
             android:drawablePadding="15dp"
             android:hint="Mật khẩu"
             android:padding="20dp"
-            android:password="true"
+            android:inputType="textPassword"
+            android:textColorHint="@color/grey1"></EditText>
+
+        <EditText
+            android:id="@+id/register_cofirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey"
+            android:drawableLeft="@drawable/register_password_image"
+            android:drawablePadding="15dp"
+            android:hint="Mật khẩu"
+            android:padding="20dp"
+            android:inputType="textPassword"
             android:textColorHint="@color/grey1"></EditText>
 
         <LinearLayout
@@ -80,17 +98,27 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/dkdv"
+                android:id="@+id/register_show_dieukhoan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="-20dp"
                 android:text="Điều khoản dịch vụ"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/blue">
+            </Button>
+
+            <Button
+                android:id="@+id/register_show_password"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:text="Hiện mật khẩu"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/blue">
             </Button>
         </LinearLayout>
         <Button
-            android:id="@+id/bt_dangky"
+            android:id="@+id/register_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"

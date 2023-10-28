@@ -18,7 +18,7 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:id="@+id/buttonback"
+            android:id="@+id/login_login_back"
             android:layout_width="70dp"
             android:layout_height="60dp"
             android:background="@color/white"
@@ -35,21 +35,21 @@
             android:textColor="@color/blue">
         </TextView>
 
-        <EditText
+        <TextView
             android:id="@+id/login_error"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/blue"
+            android:background="@color/green"
             android:drawablePadding="15dp"
-            android:hint="Tài khoản Hoặc Mật Khẩu Không Chính xác"
+            android:text="Tài khoản Hoặc Mật Khẩu Không Chính xác"
             android:padding="20dp"
-            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="15dp"
-            tools:visibility="visible"></EditText>
+            tools:visibility="invisible"></TextView>
 
         <EditText
-            android:id="@+id/ntt_email"
+            android:id="@+id/login_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -61,7 +61,7 @@
             android:textColorHint="@color/black"></EditText>
 
         <EditText
-            android:id="@+id/ntt_matkhau"
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -71,7 +71,7 @@
             android:textSize="20dp"
             android:hint="Nhập mật khẩu"
             android:padding="20dp"
-            android:password="true"
+            android:inputType="textPassword"
             android:textColorHint="@color/black"></EditText>
 
         <LinearLayout
@@ -80,10 +80,11 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/forgot_pasword"
-                android:layout_width="wrap_content"
+                android:id="@+id/login_show_password"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Quên Mật Khẩu"
+                android:text="Hiện mật khẩu"
+                android:layout_marginLeft="220dp"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/blue">
             </Button>
@@ -91,7 +92,7 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/bt_dangnhap"
+            android:id="@+id/login_login_btn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center"

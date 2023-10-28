@@ -14,12 +14,13 @@
         android:layout_marginBottom="30dp"
         android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_repage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:drawableRight="@drawable/register_repage_image"
-        android:background=""></Button>
+        <ImageButton
+            android:id="@+id/register_dieukhoan_back"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="center"
+            app:srcCompat="@drawable/login_back_button2" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

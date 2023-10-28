@@ -19,6 +19,18 @@
             android:name=".menu.lookup.lookup_main_activity"
             android:exported="false" />
         <activity
+            android:name=".menu.login.login_login_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.login.login_main_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.register.register_dieukhoan_activity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.register.register_main_activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

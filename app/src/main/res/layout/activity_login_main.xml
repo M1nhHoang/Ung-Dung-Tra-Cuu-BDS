@@ -36,7 +36,7 @@
             android:text="Tra cứu Thông Tin Quy Hoạch Bất Động sản 2023" />
 
         <ImageButton
-            android:id="@+id/bt_dangnhap"
+            android:id="@+id/login_main_start"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
@@ -61,7 +61,7 @@
 
 
             <ImageButton
-                android:id="@+id/login_with_google"
+                android:id="@+id/login_with_google1"
                 android:layout_width="160dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="30dp"
@@ -72,7 +72,7 @@
             </ImageButton>
 
             <ImageButton
-                android:id="@+id/login_with_facebook"
+                android:id="@+id/login_with_facebook1"
                 android:layout_width="160dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="30dp"
@@ -98,7 +98,7 @@
                 android:textColor="@color/black" />
 
             <Button
-                android:id="@+id/dang_ki"
+                android:id="@+id/login_main_register"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/white"
