@@ -2,14 +2,11 @@
 package com.minhhoang.nhom8_ltdd_tracuubds;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
-import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_sreach_activity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         loadActivity(lookup_main_activity.class);
-
     }
 
     private void loadActivity(Class<?> targetActivityClass) {
