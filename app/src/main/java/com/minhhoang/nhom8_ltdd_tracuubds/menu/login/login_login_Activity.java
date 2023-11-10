@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
 
 public class login_login_Activity extends AppCompatActivity {
@@ -54,7 +55,7 @@ public class login_login_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (login_service()) {
-                    loadActivity(lookup_main_activity.class);
+                    loadActivity(home_main_activity.class);
                 }
                 else {
                     login_error.setVisibility(View.VISIBLE);
