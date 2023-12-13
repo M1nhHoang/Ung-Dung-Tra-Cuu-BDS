@@ -31,10 +31,19 @@ import com.google.android.gms.tasks.Task;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+
 public class lookup_map extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 1;
     private FusedLocationProviderClient fusedLocationClient;
     private SupportMapFragment mapFragment;
+    private String lookup_URL = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +106,36 @@ public class lookup_map extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    private void get_bound() {
+        try {
+            // Mở kết nối
+            URL obj = new URL(this.lookup_URL);
+            HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
+
+            // Cấu hình yêu cầu
+            connection.setRequestMethod("GET");
+
+            // Đọc phản hồi từ máy chủ
+            int responseCode = connection.getResponseCode();
+            System.out.println("Response Code: " + responseCode);
+
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+                String inputLine;
+                StringBuilder response = new StringBuilder();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+
+                // In dữ liệu nhận được
+                System.out.println("Response Data: " + response.toString());
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void getLastLocation() {
