@@ -1,5 +1,6 @@
 package com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
 
@@ -60,7 +62,23 @@ public class lookup_by_toado_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_lookup_by_toado_, container, false);
+
+        // Bắt sự kiện khi nút được nhấn
+        view.findViewById(R.id.toado_select).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lấy giá trị biến bạn muốn truyền
+                String coordinates = ((EditText)view.findViewById(R.id.toado_srach)).getText().toString();
+
+                // Chuyển sang Activity mới và truyền giá trị
+                Intent intent = new Intent(getActivity(), lookup_map.class);
+                intent.putExtra("Coordinates", coordinates);
+                startActivity(intent);
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lookup_by_toado_, container, false);
+        return view;
     }
 }

@@ -21,6 +21,7 @@
         android:paddingStart="20dp" />
 
     <ImageButton
+        android:id="@+id/diachi_select"
         android:layout_width="343dp"
         android:layout_height="44dp"
         android:layout_alignParentLeft="true"
