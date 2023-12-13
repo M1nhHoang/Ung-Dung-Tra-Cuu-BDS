@@ -12,7 +12,6 @@
         android:id="@+id/hoso_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
         android:background="@drawable/profile_hoso_menu">
 
         <FrameLayout
@@ -84,14 +83,16 @@
 
         <TextView
             android:id="@+id/txtEmail"
-            android:layout_width="141dp"
+            android:layout_width="355dp"
             android:layout_height="17dp"
-            android:layout_gravity="left|top"
-            android:layout_marginLeft="115dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="219dp"
-            android:text="abcxyz@gmail.com"
+            android:text=""
             android:textColor="@color/black"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            android:gravity="center" />
+
 
         <Button
             android:id="@+id/profile_main_setting"
@@ -108,54 +109,55 @@
             android:id="@+id/profile_setting_button"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="350dp"
             android:background="@color/white"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/profile_setting_button" />
 
         <ImageButton
             android:id="@+id/profile_history_button"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="420dp"
             android:background="@color/white"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/profile_history_button" />
 
         <ImageButton
             android:id="@+id/profile_notification_button"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="490dp"
             android:background="@color/white"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/profile_notification_button" />
 
         <ImageButton
             android:id="@+id/profile_support_button"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="560dp"
             android:background="@color/white"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/profile_support_button" />
 
         <ImageButton
             android:id="@+id/profile_logout"
             android:layout_width="110dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="630dp"
             android:layout_marginLeft="100dp"
+            android:layout_marginTop="630dp"
             android:background="@color/white"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/profile_logout" />
 
     </FrameLayout>
+
     <FrameLayout
         android:id="@+id/profile_main_footer"
         android:layout_width="match_parent"

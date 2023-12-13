@@ -3,6 +3,7 @@ package com.minhhoang.nhom8_ltdd_tracuubds.menu.login;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -13,32 +14,35 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.DangKyDatabaseHelper;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.UserSession;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.profile.profile_main_activity;
 
 public class login_login_Activity extends AppCompatActivity {
     private ImageButton back, login_with_google, login_with_facebook, login;
     private TextView login_error;
     private EditText login_username, login_password;
     private Button login_show_password;
+    private DangKyDatabaseHelper registerDbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_login);
 
+        registerDbHelper = new DangKyDatabaseHelper(this);
+        login_username = findViewById(R.id.login_username);
+        login_password = findViewById(R.id.login_password);
+        login = findViewById(R.id.login_login_btn);
+
+
+
         create_button();
     }
 
-    private boolean login_service() {
-        String sample_username = "admin", sample_password = "admin";
 
-        if (login_username.getText().toString().equals(sample_username) && login_password.getText().toString().equals(sample_password)){
-            return  true;
-        }
-        else {
-            return false;
-        }
-    }
+
 
     private void create_button() {
         back = findViewById(R.id.login_login_back);
@@ -54,11 +58,18 @@ public class login_login_Activity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (login_service()) {
+                String username = login_username.getText().toString();
+                String password = login_password.getText().toString();
+
+                if (registerDbHelper.checkLogin(username, password)) {
+                    Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+                    // Lưu thông tin đăng nhập vào UserSession
+                    UserSession.getInstance().setLoggedInUsername(username);
+
+                    // Chuyển sang màn hình chính hoặc màn hình sau khi đăng nhập thành công
                     loadActivity(home_main_activity.class);
-                }
-                else {
-                    login_error.setVisibility(View.VISIBLE);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại tên đăng nhập và mật khẩu.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -107,4 +118,5 @@ public class login_login_Activity extends AppCompatActivity {
         Intent intent = new Intent(this, targetActivityClass);
         startActivity(intent);
     }
+
 }

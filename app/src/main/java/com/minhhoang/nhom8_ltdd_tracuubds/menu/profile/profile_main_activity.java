@@ -9,12 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.FooterFragment;
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.DangKyDatabaseHelper;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.UserSession;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.login.login_main_Activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
@@ -25,11 +28,36 @@ public class profile_main_activity extends AppCompatActivity {
     private Adapter_LvMain adapter;
     private ImageButton back, profile_setting_button, profile_history_button, profile_notification_button, profile_support_button, profile_logout;
     private Button profile_main_setting;
-
+    private DangKyDatabaseHelper dangKyDbHelper;
+    private TextView txtTen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_hoso_main);
+        txtTen = findViewById(R.id.txtTen);
+        // Nhận dữ liệu từ Intent
+        Intent intent = getIntent();
+        if (intent != null) {
+            String hoten = intent.getStringExtra("hoten");
+
+            // Kiểm tra xem hoten có giá trị không trước khi cập nhật
+            if (hoten != null) {
+                // Cập nhật phần text của TextView txtTen
+                txtTen.setText(hoten);
+            }
+        }
+        dangKyDbHelper = new DangKyDatabaseHelper(this);
+
+        // Lấy thông tin người dùng từ cơ sở dữ liệu và cập nhật giao diện
+        String username = UserSession.getInstance().getLoggedInUsername();
+        String email = dangKyDbHelper.getEmailByUsername(username);
+
+
+        TextView txtEmail = findViewById(R.id.txtEmail);
+
+
+        txtEmail.setText(email);
+
 
         createFooter();
         create_back_button();

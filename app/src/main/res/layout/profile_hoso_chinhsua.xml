@@ -240,38 +240,7 @@
                 android:gravity="top"
                 android:letterSpacing="0.03"
                 android:lineSpacingExtra="2sp"
-                android:text="Số điện thoại"
-                android:textColor="@color/black"
-                android:textSize="12dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/txtbPhoneNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:layout_marginTop="40dp"
-                android:hint="Nhập số điện thoại"
-                android:textSize="10dp" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="329dp"
-            android:layout_height="116dp"
-            android:layout_marginLeft="23dp"
-            android:layout_marginTop="599dp"
-            android:clipToOutline="true"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="140dp"
-                android:layout_height="30dp"
-                android:layout_gravity="top|start"
-                android:layout_marginTop="13dp"
-                android:gravity="top"
-                android:letterSpacing="0.03"
-                android:lineSpacingExtra="2sp"
-                android:text="Số điện thoại"
+                android:text="Email"
                 android:textColor="@color/black"
                 android:textSize="12dp"
                 android:textStyle="bold" />
@@ -282,9 +251,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:layout_marginTop="40dp"
-                android:hint="Nhập số điện thoại"
+                android:hint="Nhập email"
                 android:textSize="10dp" />
-                </FrameLayout>
+        </FrameLayout>
+
             </FrameLayout>
             <Button
                 android:id="@+id/btnChange"
@@ -306,7 +276,7 @@
         android:layout_height="62dp"
         android:layout_gravity="left|top"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="700dp">
+        android:layout_marginTop="630dp">
 
         <Button
             android:id="@+id/button_editProfile"

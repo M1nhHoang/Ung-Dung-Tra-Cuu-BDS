@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.DangKyDatabaseHelper;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.login.login_login_Activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.login.login_main_Activity;
 
 public class register_main_activity extends AppCompatActivity {
@@ -21,11 +23,14 @@ public class register_main_activity extends AppCompatActivity {
     private Button register_btn;
     private EditText username_input, email_input, password_input, confirm_password_input;
 
+    private DangKyDatabaseHelper registerDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_main);
+
+        registerDbHelper = new DangKyDatabaseHelper(this);
 
         create_back_button();
         create_register_feature();
@@ -47,11 +52,15 @@ public class register_main_activity extends AppCompatActivity {
                 String  password  = password_input.getText().toString();
                 String  confirm_password = confirm_password_input.getText().toString();
 
-                if (password.equals(confirm_password))
-                Toast.makeText(getApplicationContext()
-                        , String.format("Bạn đã đăng kí thành công với tài khoản là: %s, mật khẩu là: %s.", username, password)
-                        , Toast.LENGTH_LONG).show();
-                else {
+                if (password.equals(confirm_password)) {
+                    // Thêm dữ liệu vào cơ sở dữ liệu
+                    long newRowId = registerDbHelper.addUser(username, email, password);
+
+                    Toast.makeText(getApplicationContext()
+                            , String.format("Bạn đã đăng ký thành công với tài khoản là: %s, mật khẩu là: %s.", username, password)
+                            , Toast.LENGTH_LONG).show();
+                    loadActivity(login_login_Activity.class);
+                } else {
                     Toast.makeText(getApplicationContext()
                             , "Mật khẩu phải trùng khớp!"
                             , Toast.LENGTH_SHORT).show();
