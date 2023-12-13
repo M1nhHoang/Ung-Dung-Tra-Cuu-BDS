@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         loadActivity(login_main_Activity.class);
     }
 
@@ -22,5 +21,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, targetActivityClass);
         startActivity(intent);
     }
-
 }
