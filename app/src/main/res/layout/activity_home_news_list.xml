@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_trolai"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/home_west_left"
+            />
+
+        <EditText
+            android:id="@+id/edtSeach"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/btn_trolai"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/home_botron_edittext"
+            android:backgroundTint="#BDD9D9D9"
+            android:drawableLeft="@drawable/home_search"
+            android:hint="Nhập tên tin tức"
+            android:paddingLeft="10dp"
+            android:textColorHint="#59000000"
+            android:textStyle="bold"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#fff"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/home_account" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/tvSoLgTT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Có 14 tin mới"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_DsTinTuc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

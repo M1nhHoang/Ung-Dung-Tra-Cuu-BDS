@@ -64,6 +64,16 @@
             android:name=".menu.profile.Thongbao_main"
             android:exported="false" />
         <activity
+            android:name=".menu.home.Home_MainActivity"
+            android:exported="false">
+        </activity>
+        <activity android:name=".menu.home.Home_DsTinTucActivity"
+            android:exported="false"
+            />
+        <activity android:name=".menu.home.Home_NewsDetailsActivity"
+            android:exported="false"
+            />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -72,6 +82,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

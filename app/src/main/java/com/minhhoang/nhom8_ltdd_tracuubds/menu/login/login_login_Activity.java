@@ -26,6 +26,8 @@ public class login_login_Activity extends AppCompatActivity {
     private EditText login_username, login_password;
     private Button login_show_password;
     private DangKyDatabaseHelper registerDbHelper;
+    private String admin_username = "admin";
+    private String admin_password = "admin";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +42,6 @@ public class login_login_Activity extends AppCompatActivity {
 
         create_button();
     }
-
-
-
 
     private void create_button() {
         back = findViewById(R.id.login_login_back);
@@ -60,6 +59,15 @@ public class login_login_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = login_username.getText().toString();
                 String password = login_password.getText().toString();
+
+                // if admin user
+                if (username.equals(admin_username) && password.equals(admin_password)) {
+                    // Lưu thông tin đăng nhập vào UserSession
+                    UserSession.getInstance().setLoggedInUsername(username);
+
+                    // Chuyển sang màn hình chính hoặc màn hình sau khi đăng nhập thành công
+                    loadActivity(home_main_activity.class);
+                }
 
                 if (registerDbHelper.checkLogin(username, password)) {
                     Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();

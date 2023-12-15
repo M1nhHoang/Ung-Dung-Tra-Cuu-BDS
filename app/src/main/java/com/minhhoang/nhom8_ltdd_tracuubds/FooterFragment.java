@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.Home_MainActivity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.profile.profile_main_activity;
@@ -77,7 +78,7 @@ public class FooterFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Tạo Intent để chuyển đổi sang Activity mới
-                Intent intent = new Intent(getActivity(), home_main_activity.class);
+                Intent intent = new Intent(getActivity(), Home_MainActivity.class);
                 startActivity(intent);
             }
         });

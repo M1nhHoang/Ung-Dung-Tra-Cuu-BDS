@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DADADA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_marginStart="5dp"
+            android:id="@+id/btn_trolai_detail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/home_west_left"
+            />
+
+        <EditText
+            android:id="@+id/edtSeach"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/btn_trolai_detail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/home_botron_edittext"
+            android:backgroundTint="#BDD9D9D9"
+            android:drawableLeft="@drawable/home_search"
+            android:hint="Nhập tên tin tức"
+            android:paddingLeft="10dp"
+            android:textColorHint="#59000000"
+            android:textStyle="bold"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#fff"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/home_account" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff">
+
+                <TextView
+                    android:id="@+id/textVtenTT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Ten tin tuc"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:id="@+id/txvNguoiDang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textVtenTT"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="nguoi dang"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    android:textColor="#D2FF0000"/>
+                <com.colormoon.readmoretextview.ReadMoreTextView
+                    android:id="@+id/tv_noidung_tt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txvNguoiDang"
+                    android:paddingHorizontal="10dp"
+                    android:text="Nội dung tóm tắt"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:ellipsize="end"
+                    app:trimMode="trimModeLine"
+                    app:trimLines="5"
+                    app:trimExpandedText="@string/read_less"
+                    app:trimCollapsedText="@string/read_more"
+                    app:colorClickableText="#959595"
+
+                   />
+
+                <ImageView
+                    android:id="@+id/imagerTinTuc"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/tv_noidung_tt"
+                    android:src="@drawable/home_tintuc2"
+                    android:scaleType="centerCrop"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_vien"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#BBBBBB"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/buttonLike"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableLeft="@drawable/home_favorite"
+                    android:paddingLeft="5dp"
+                    android:text="Lượt thích"
+                    android:textColor="#68000000"
+                    android:textSize="7dp"
+                    android:backgroundTint="#fff"/>
+
+                <Button
+                    android:id="@+id/buttoncomment"
+                    android:layout_width="0dp"
+                    android:layout_height="14dp"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:drawableLeft="@drawable/home_comment"
+                    android:paddingLeft="5dp"
+                    android:text="Bình luận"
+                    android:textColor="#68000000"
+                    android:textSize="7dp"
+                    />
+
+                <Button
+                    android:id="@+id/buttonShare"
+                    android:layout_width="0dp"
+                    android:layout_height="14dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableLeft="@drawable/home_share"
+                    android:paddingLeft="5dp"
+                    android:text="Chia sẻ"
+                    android:textColor="#68000000"
+                    android:textSize="7dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </ScrollView>
+</LinearLayout>

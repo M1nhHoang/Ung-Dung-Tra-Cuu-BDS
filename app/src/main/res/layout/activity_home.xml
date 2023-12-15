@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edtSeach"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/home_botron_edittext"
+            android:backgroundTint="#BDD9D9D9"
+            android:drawableLeft="@drawable/home_search"
+            android:hint="Nhập tên tin tức"
+            android:paddingLeft="10dp"
+            android:textColorHint="#81000000"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#fff"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/home_account" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/gfgf"
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_background" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tin tức mới"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/txvXentatca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xem tất cả"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#2749FE"
+                    android:clickable="true"
+
+                    />
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_tintuc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 cách tra cứu quy hoạch trên App"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_gravity="center"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_huongdan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/home_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:elevation="8dp">
+        <!-- ... (nội dung bên trong FrameLayout) ... -->
+    </FrameLayout>
+</LinearLayout>
