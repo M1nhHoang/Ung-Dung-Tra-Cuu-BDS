@@ -5,7 +5,7 @@ public class UserSession {
     private String loggedInUsername;
 
     private UserSession() {
-        // Private để ngăn chặn việc tạo đối tượng từ bên ngoài
+
     }
 
     public static synchronized UserSession getInstance() {

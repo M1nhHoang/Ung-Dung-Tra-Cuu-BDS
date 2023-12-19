@@ -9,15 +9,16 @@ import android.content.ContentValues;
 
 
 public class DangKyDatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "register_database";
-    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "user";
+    private static final int DATABASE_VERSION = 2;
 
-    // Tên bảng và các cột
+
     private static final String TABLE_NAME = "user_table";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_USERNAME = "username";
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_PASSWORD = "password";
+    private static final String COLUMN_NAME = "name";
 
     public DangKyDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -26,12 +27,13 @@ public class DangKyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-// Tạo bảng trong cơ sở dữ liệu
+        // Tạo bảng trong cơ sở dữ liệu
         String createTableQuery = "CREATE TABLE " + TABLE_NAME + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_USERNAME + " TEXT, " +
                 COLUMN_EMAIL + " TEXT, " +
-                COLUMN_PASSWORD + " TEXT)";
+                COLUMN_PASSWORD + " TEXT, " +
+                COLUMN_NAME + " TEXT)"; // Include the new column
         db.execSQL(createTableQuery);
     }
 
@@ -42,13 +44,15 @@ public class DangKyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // Phương thức để thêm dữ liệu người dùng mới
-    public long addUser(String username, String email, String password) {
+    public long addUser(String username,String password ,String name, String email  ) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_USERNAME, username);
-        values.put(COLUMN_EMAIL, email);
         values.put(COLUMN_PASSWORD, password);
+        values.put(COLUMN_NAME, name);
+        values.put(COLUMN_EMAIL, email);
+
+
 
         long newRowId = db.insert(TABLE_NAME, null, values);
         db.close();

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,15 +15,21 @@ import android.widget.Toast;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.DangKyDatabaseHelper;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.SendData;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.User;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.login.login_login_Activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.login.login_main_Activity;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class register_main_activity extends AppCompatActivity {
     private ImageButton back;
     private Button dieukhoan_btn;
     private Button show_password_btn;
     private Button register_btn;
-    private EditText username_input, email_input, password_input, confirm_password_input;
+    private EditText username_input, email_input, password_input, name_input;
 
     private DangKyDatabaseHelper registerDbHelper;
 
@@ -39,31 +47,36 @@ public class register_main_activity extends AppCompatActivity {
 
     private void create_register_feature(){
         username_input = findViewById(R.id.register_username);
+        name_input = findViewById(R.id.register_name);
         email_input = findViewById(R.id.register_email);
         password_input = findViewById(R.id.register_password);
-        confirm_password_input = findViewById(R.id.register_cofirmpassword);
+
         register_btn = findViewById(R.id.register_btn);
 
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username = username_input.getText().toString();
+                String name = name_input.getText().toString();
                 String  email  = email_input.getText().toString();
                 String  password  = password_input.getText().toString();
-                String  confirm_password = confirm_password_input.getText().toString();
 
-                if (password.equals(confirm_password)) {
-                    // Thêm dữ liệu vào cơ sở dữ liệu
-                    long newRowId = registerDbHelper.addUser(username, email, password);
+                if (TextUtils.isEmpty(username) || TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                User user = new User(username, name, email, password);
+                new SendData().execute(user);
 
-                    Toast.makeText(getApplicationContext()
-                            , String.format("Bạn đã đăng ký thành công với tài khoản là: %s, mật khẩu là: %s.", username, password)
-                            , Toast.LENGTH_LONG).show();
+                long newRowId = registerDbHelper.addUser(username,password,email,name);
+                if (newRowId != -1) {
+                    Toast.makeText(getApplicationContext(),
+                            String.format("Bạn đã đăng ký thành công với tài khoản là: %s.", username),
+                            Toast.LENGTH_LONG).show();
+
                     loadActivity(login_login_Activity.class);
                 } else {
-                    Toast.makeText(getApplicationContext()
-                            , "Mật khẩu phải trùng khớp!"
-                            , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Đăng ký không thành công. Vui lòng thử lại.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -73,7 +86,7 @@ public class register_main_activity extends AppCompatActivity {
         show_password_btn = findViewById(R.id.register_show_password);
         dieukhoan_btn = findViewById(R.id.register_show_dieukhoan);
         password_input = findViewById(R.id.register_password);
-        confirm_password_input = findViewById(R.id.register_cofirmpassword);
+
 
         dieukhoan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,12 +100,12 @@ public class register_main_activity extends AppCompatActivity {
             public void onClick(View v) {
                 if (show_password_btn.getText().toString().equals("Hiện mật khẩu")) {
                     password_input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    confirm_password_input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
                     show_password_btn.setText("Ẩn mật khẩu");
                 }
                 else {
                     password_input.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                    confirm_password_input.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
                     show_password_btn.setText("Hiện mật khẩu");
                 }
             }

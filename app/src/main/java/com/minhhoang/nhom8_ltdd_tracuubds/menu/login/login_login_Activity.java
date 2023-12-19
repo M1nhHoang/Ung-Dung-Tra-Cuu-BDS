@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,11 +15,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.minhhoang.nhom8_ltdd_tracuubds.R;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.ApiService;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.DangKyDatabaseHelper;
+import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.User;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase.UserSession;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.profile.profile_main_activity;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class login_login_Activity extends AppCompatActivity {
     private ImageButton back, login_with_google, login_with_facebook, login;
@@ -60,24 +69,51 @@ public class login_login_Activity extends AppCompatActivity {
                 String username = login_username.getText().toString();
                 String password = login_password.getText().toString();
 
-                // if admin user
+
                 if (username.equals(admin_username) && password.equals(admin_password)) {
-                    // Lưu thông tin đăng nhập vào UserSession
+
                     UserSession.getInstance().setLoggedInUsername(username);
 
-                    // Chuyển sang màn hình chính hoặc màn hình sau khi đăng nhập thành công
+
                     loadActivity(home_main_activity.class);
                 }
 
-                if (registerDbHelper.checkLogin(username, password)) {
-                    Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-                    // Lưu thông tin đăng nhập vào UserSession
-                    UserSession.getInstance().setLoggedInUsername(username);
+                if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
 
-                    // Chuyển sang màn hình chính hoặc màn hình sau khi đăng nhập thành công
-                    loadActivity(home_main_activity.class);
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl("https://crew-beach-ferry-protective.trycloudflare.com/")
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+
+
+                    ApiService apiService = retrofit.create(ApiService.class);
+
+
+                    Call<User> call = apiService.auth(username, password);
+                    call.enqueue(new Callback<User>() {
+                        @Override
+                        public void onResponse(Call<User> call, Response<User> response) {
+                            if (response.isSuccessful()) {
+
+                                User user = response.body();
+                                Toast.makeText(getApplicationContext(), "Đăng nhập thành công!" , Toast.LENGTH_SHORT).show();
+                                UserSession.getInstance().setLoggedInUsername(username);
+                                loadActivity(home_main_activity.class);
+                            } else {
+
+                                Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại tên đăng nhập và mật khẩu.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<User> call, Throwable t) {
+
+                            Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại kết nối internet.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 } else {
-                    Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại tên đăng nhập và mật khẩu.", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập lại!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
