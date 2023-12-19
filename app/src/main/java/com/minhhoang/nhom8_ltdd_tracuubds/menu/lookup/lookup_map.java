@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.content.pm.PackageManager;
@@ -26,6 +27,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.PolygonOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -44,7 +49,8 @@ public class lookup_map extends AppCompatActivity {
     private FusedLocationProviderClient fusedLocationClient;
     private SupportMapFragment mapFragment;
     private String lookup_URL = "";
-
+    private Polyline borderPolyline;
+    private Polygon polygon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,12 +108,34 @@ public class lookup_map extends AppCompatActivity {
 
                         // Hiển thị tọa độ
                         Log.d("Map", "onCameraMove: " + centerOfMap.latitude + ", " + centerOfMap.longitude);
+                        // Vẽ đường viền xung quanh tọa độ hiện tại
+
+
+                        // Tô đậm phần nằm dưới dấu chấm
+                        drawFilledAreaUnderCenterDot(googleMap, centerOfMap);
                     }
                 });
             }
         });
     }
 
+    private void drawFilledAreaUnderCenterDot(GoogleMap googleMap, LatLng location) {
+
+        if (polygon != null) {
+            polygon.remove();
+        }
+
+        double squareSize = 0.002;
+        // Tạo một đối tượng PolygonOptions để vẽ đa giác hình vuông
+        PolygonOptions polygonOptions = new PolygonOptions()
+                .add(new LatLng(location.latitude - squareSize, location.longitude - squareSize))
+                .add(new LatLng(location.latitude + squareSize, location.longitude - squareSize))
+                .add(new LatLng(location.latitude + squareSize, location.longitude + squareSize))
+                .add(new LatLng(location.latitude - squareSize, location.longitude + squareSize))
+                .fillColor(Color.argb(100, 255, 0, 0)); // Màu sắc của phần tô đậm (đỏ với độ mờ 100)
+        // Vẽ Polygon trên bản đồ và lưu vào biến polygon
+        polygon = googleMap.addPolygon(polygonOptions);
+    }
     private void get_bound() {
         try {
             // Mở kết nối

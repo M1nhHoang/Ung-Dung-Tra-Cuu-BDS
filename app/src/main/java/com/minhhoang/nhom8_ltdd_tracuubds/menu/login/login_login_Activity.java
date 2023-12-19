@@ -23,6 +23,9 @@ import com.minhhoang.nhom8_ltdd_tracuubds.menu.home.home_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.lookup.lookup_main_activity;
 import com.minhhoang.nhom8_ltdd_tracuubds.menu.profile.profile_main_activity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -88,20 +91,28 @@ public class login_login_Activity extends AppCompatActivity {
 
                     ApiService apiService = retrofit.create(ApiService.class);
 
+                    Map<String, String> params = new HashMap<>();
+                    params.put("username", username);
+                    params.put("password", password);
 
                     Call<User> call = apiService.auth(username, password);
                     call.enqueue(new Callback<User>() {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             if (response.isSuccessful()) {
-
                                 User user = response.body();
-                                Toast.makeText(getApplicationContext(), "Đăng nhập thành công!" , Toast.LENGTH_SHORT).show();
-                                UserSession.getInstance().setLoggedInUsername(username);
-                                loadActivity(home_main_activity.class);
+                                if (user != null && user.isAuthenticated()) {
+                                    // Đăng nhập thành công
+                                    Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+                                    UserSession.getInstance().setLoggedInUsername(username);
+                                    loadActivity(home_main_activity.class);
+                                } else {
+                                    // Đăng nhập thất bại
+                                    Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại tên đăng nhập và mật khẩu.", Toast.LENGTH_SHORT).show();
+                                }
                             } else {
-
-                                Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại tên đăng nhập và mật khẩu.", Toast.LENGTH_SHORT).show();
+                                // Đăng nhập thất bại (lỗi từ API)
+                                Toast.makeText(getApplicationContext(), "Đăng nhập thất bại. Kiểm tra lại kết nối internet.", Toast.LENGTH_SHORT).show();
                             }
                         }
 

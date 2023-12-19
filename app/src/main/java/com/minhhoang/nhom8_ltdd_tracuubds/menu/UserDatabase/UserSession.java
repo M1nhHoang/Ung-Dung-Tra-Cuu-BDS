@@ -23,4 +23,3 @@ public class UserSession {
         this.loggedInUsername = loggedInUsername;
     }
 }
-

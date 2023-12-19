@@ -1,11 +1,14 @@
 package com.minhhoang.nhom8_ltdd_tracuubds.menu.UserDatabase;
 
+import com.google.gson.annotations.SerializedName;
+
 public class User {
     private String user_name;
     private String name;
     private String email;
     private String password;
-
+    @SerializedName("authenticated")
+    private boolean authenticated;
     public String getUser_name() {
         return user_name;
     }
@@ -43,5 +46,12 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public boolean isAuthenticated() {
+        return authenticated;
+    }
+    public void setAuthenticated(boolean authenticated) {
+        this.authenticated = authenticated;
     }
 }
