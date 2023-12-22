@@ -10,17 +10,30 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <View
         android:id="@+id/center_dot"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="344dp"
         android:layout_marginEnd="196dp"
-        android:background="@drawable/login_user_ico"
+        android:background="@drawable/lookup_location"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/map" />
+
+    <Button
+        android:id="@+id/button_get_potition"
+        android:layout_width="292dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/lookup_select_position"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
